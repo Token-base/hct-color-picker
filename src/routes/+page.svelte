@@ -3,7 +3,7 @@
 	import * as Card from "$lib/components/ui/card";
     import { Hct } from '@material/material-color-utilities'
     import Color from 'color'
-	import ShowColors from '$lib/ShowColors.svelte';
+	import BackgroundColorDisplay from '$lib/BackgroundColorDisplay.svelte';
     import Slider from '$lib/components/ui/slider/slider.svelte';
     
 	export let hue: number[] = [180];
@@ -82,7 +82,7 @@
 					background={hueBackground}
 					bind:value={hue}
 				/>
-				<ShowColors background={hueBackground}/>
+				<BackgroundColorDisplay background={hueBackground}/>
 	
 			</div>
 			<div class="flex w-full max-w-[220px] flex-col gap-2">
@@ -100,7 +100,7 @@
 					background={chromaBackground}
 					bind:value={chroma}
 				/>
-				<ShowColors background={chromaBackground}/>
+				<BackgroundColorDisplay background={chromaBackground}/>
 			</div>
 			<div class="flex w-full max-w-[220px] flex-col gap-2">
 				<div class="flex flex-row items-center justify-between">
@@ -117,7 +117,7 @@
 					background={toneBackground}
 					bind:value={tone}
 				/>
-				<ShowColors background={toneBackground}/>
+				<BackgroundColorDisplay background={toneBackground}/>
 			</div>
 		</div>
 	</Card.Content>
